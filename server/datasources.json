@@ -21,15 +21,5 @@
         }
       }
     ]
-  },
-  "retire-now": {
-    "host": "",
-    "port": 0,
-    "url": "mongodb://retireadmin:RetireNow123!@ds018498.mlab.com:18498/retire-now",
-    "database": "",
-    "password": "",
-    "name": "retire-now",
-    "user": "",
-    "connector": "mongodb"
   }
 }
