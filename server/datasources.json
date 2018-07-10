@@ -1,0 +1,35 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "emailDataSource": {
+    "name": "emailDataSource",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.ethereal.email",
+        "secure": false,
+        "port": 587,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "gcpbxtll26u4z4yk@ethereal.email",
+          "pass": "bxz9BjbkgQTqda3DuA"
+        }
+      }
+    ]
+  },
+  "retire-now": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://retireadmin:RetireNow123!@ds018498.mlab.com:18498/retire-now",
+    "database": "",
+    "password": "",
+    "name": "retire-now",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
