@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "appUser": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "profile": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

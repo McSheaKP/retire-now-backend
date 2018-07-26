@@ -1,0 +1,46 @@
+{
+  "name": "profile",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "fra": {
+      "type": "number"
+    },
+    "fraMonths": {
+      "type": "number"
+    },
+    "fraDate": {
+      "type": "date"
+    },
+    "fraAmount": {
+      "type": "number",
+      "required": true
+    },
+    "retireAge": {
+      "type": "number"
+    },
+    "retireDate": {
+      "type": "date",
+      "required": true
+    },
+    "monthlyAmount": {
+      "type": "number"
+    },
+    "chart": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
