@@ -36,11 +36,11 @@
     "public": false
   },
   "appUser": {
-    "dataSource": "mongodb",
+    "dataSource": "mongo",
     "public": true
   },
   "profile": {
-    "dataSource": "mongodb",
+    "dataSource": "mongo",
     "public": true
   }
 }
