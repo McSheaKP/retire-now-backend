@@ -1,4 +1,5 @@
 'use strict';
+const moment = require('moment');
 
 module.exports = function(Appuser) {
     Appuser.remoteMethod("totalMonthsFRA", {
@@ -45,7 +46,13 @@ module.exports = function(Appuser) {
             } else {
             totalFRAMonths = "already at 70, trigger"; 
             }
-            callback(0, totalFRAMonths)
+            let FRADate = moment(userDOB).add(totalFRAMonths, "months");
+            let userFRAData = {
+                "FRAMonths": totalFRAMonths,
+                "FRADate": FRADate
             }
+            console.log("userFRAData", userFRAData); 
+            callback(0, userFRAData); 
+        }            
 
 };
