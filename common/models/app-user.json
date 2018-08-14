@@ -17,6 +17,18 @@
     "dob": {
       "type": "date",
       "required": true
+    }, 
+    "totalFRAMonths": {
+      "type": "number",
+      "required": true
+    },
+    "fraDate": {
+      "type": "date",
+      "required": true
+    },
+    "fraAge": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

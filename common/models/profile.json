@@ -10,25 +10,12 @@
       "type": "string",
       "required": true
     },
-    "fra": {
-      "type": "number"
-    },
-    "fraMonths": {
-      "type": "number"
-    },
-    "fraDate": {
-      "type": "date"
-    },
     "fraAmount": {
       "type": "number",
       "required": true
     },
     "retireAge": {
       "type": "number"
-    },
-    "retireDate": {
-      "type": "date",
-      "required": true
     },
     "monthlyAmount": {
       "type": "number"
@@ -37,6 +24,9 @@
       "type": [
         "object"
       ]
+    }, 
+    "barChartLabels": {
+      "type": "array"
     }
   },
   "validations": [],
