@@ -20,24 +20,11 @@ module.exports = function(Profile) {
         }
     });
     Profile.retireNowCalc = function (userData, callback){
-    
-    
-
-    //This is just temp data to use as an example
-    userData = {
-        FRANumMths: 0,
-        FRAAge: 0,
-        FRADate: "2022-05-20",
-        profileName: "profile1",
-        myFRAAmt: 1000,
-        myDOR: "2020-01-20",
-        myDOB: "1965-01-15" 
-    }
 
     let myFRAAmt = userData.myFRAAmt;
     let myDOB = userData.myDOB;
     let myDOR = userData.myDOR;
-    let FRAMonths = userData.FRANumMths;
+    let FRAMonths = userData.fraMonths;
     let FRADate = userData.FRADate;
     
     let userObject = {
@@ -60,7 +47,7 @@ module.exports = function(Profile) {
 
         userObject.name = userData.profileName;
         userObject.retireDate = userData.myDOR; 
-
+        
     }
     
     //calculate the retire age for the chart
@@ -82,7 +69,6 @@ module.exports = function(Profile) {
       let mthsDiff = Math.abs(moment(FRADate).diff(age70Date, "months"));
       let percent = (mthsDiff * (2/3 *.01)) ; 
       let mthAmt70 = (percent * myFRAAmt) + myFRAAmt;
-      console.log("Amount returned at 70 func", mthAmt70);
       return mthAmt70;
     }
     
@@ -132,10 +118,8 @@ module.exports = function(Profile) {
 
     function populateChart(){
        
-        //console.log('Fn calcRetireAge', this.calcRetireAge)
-        console.log('Fn calcRetireAge outside', calcRetireAge)
+       
         let retireAge = calcRetireAge(myDOB, myDOR);
-        console.log("this is my retire age", retireAge)
         let fullRetireAge = calcFullRetirmentAge(myDOB, FRAMonths);
      
         let chart = [
