@@ -9,12 +9,24 @@ module.exports = function(Appuser) {
         }
    })
 
- Appuser.afterRemote('login', async(ctx, user, next) =>{
-        if (user) {
-            user.token = user.id;
+    Appuser.afterRemote('login', async (ctx, user, next) => {
+        if(user){
+        // console.log("hit")
+        user.token = user.id;
+        let userData = await Appuser.find({
+        fields:{password: false, username: false, realm: false, '_id': 0},
+        include:{
+        relation: 'profiles',
+        scope: {
+        fields: ['fra']
+       }, },  where: {
+        id: user.userId
         }
-   })
-
+       })  
+         console.log()
+        user.userData = userData[0]
+       } 
+    })
    
     Appuser.observe('after save', function(ctx, next) {
     if (ctx.isNewInstance === true) {
@@ -32,5 +44,5 @@ module.exports = function(Appuser) {
           }
       });
   
-
 };
+
