@@ -20,6 +20,9 @@
     "monthlyAmount": {
       "type": "number"
     },
+    "retireDate":{
+      "type": "string"
+    },
     "chart": {
       "type": [
         "object"
