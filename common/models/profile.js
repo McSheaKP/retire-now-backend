@@ -148,8 +148,13 @@ module.exports = function(Profile) {
             chart[0].data[2] = myFRAAmt;
             barChartLabels[1] = retireAge;
             barChartLabels[2] = fullRetireAge; 
-          }
-          else{
+          } 
+          else if (retireAge == fullRetireAge){
+            chart[0].data[1] = myFRAAmt;
+            chart[0].data[2] = myFRAAmt;
+            barChartLabels[1] = retireAge;
+            barChartLabels[2] = fullRetireAge; 
+          }else{
             chart[0].data[1] = myFRAAmt;
             monthlyAmount = calcMonthAmtRetireDate(FRADate, myDOR, myFRAAmt);
             chart[0].data[2] = monthlyAmount.toString(); 
