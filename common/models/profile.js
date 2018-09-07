@@ -66,7 +66,6 @@ module.exports = function(Profile) {
       }
       
       function calcMonthAmt70(DOB, FRADate, myFRAAmt){
-        console.log("dob", myDOB,"fradate", FRADate,'framt ',myFRAAmt)
         let age70Date = moment(DOB).add(70, "years");
         let mthsDiff = Math.abs(moment(FRADate).diff(age70Date, "months"));
         let percent = (mthsDiff * (2/3 *.01)); 
@@ -99,7 +98,7 @@ module.exports = function(Profile) {
         let mthsDiff = moment(FRADate).diff(myDOR, "months");
         let percent;
         let retireAmt;
-        if(mthsDiff > 0){
+        if(mthsDiff >= 0){
           if (mthsDiff <= 36){
             percent = mthsDiff * (.01 * (5/9));
             percent = Math.round(percent * 1000) / 1000;
